@@ -6,7 +6,8 @@
   "scripts": {
     "test": "jest",
     "lint": "prettier --check . && eslint .",
-    "lint:fix": "prettier --write . && eslint . --fix"
+    "lint:fix": "prettier --write . && eslint . --fix",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -33,7 +34,13 @@
     "eslint-config-prettier": "^8.4.0",
     "eslint-plugin-import": "^2.25.4",
     "eslint-plugin-jest": "^26.1.1",
+    "husky": "^7.0.4",
     "jest": "^27.5.1",
+    "lint-staged": "^12.3.4",
     "prettier": "2.5.1"
+  },
+  "lint-staged": {
+    "*.js": "eslint --fix",
+    "*.{js,css,md}": "prettier --write"
   }
 }
