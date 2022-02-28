@@ -1,7 +1,8 @@
-import { mul } from "./mul";
+import { a, b, c, d } from "./mul";
 
 describe("mul", () => {
-  it("mul of nums", () => {
-    expect(mul(4, 2)).toEqual(8);
+  it("mul and sum of nums", () => {
+    expect(c).toBe(a * b);
+    expect(d).toBe(a + b);
   });
 });
