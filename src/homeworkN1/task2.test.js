@@ -1,7 +1,7 @@
-import { first, second, totalLength } from "./task2";
+import { sumOfStr } from "./task2";
 
 describe("strings", () => {
   it("length of strings", () => {
-    expect(totalLength).toBe(first.length + second.length);
+    expect(sumOfStr("John", "Tom")).toBe(7);
   });
 });

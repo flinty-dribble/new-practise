@@ -1,3 +1,3 @@
-export const first = "John";
-export const second = "Smith";
-export const totalLength = first.length + second.length;
+export function sumOfStr(first, second) {
+  return first.length + second.length;
+}
