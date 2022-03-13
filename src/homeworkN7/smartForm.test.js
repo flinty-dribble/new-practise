@@ -40,6 +40,8 @@ describe("smart form", () => {
     expect(el.querySelector("button").hidden).toBe(true);
   });
   it("if paragraphs more than 5 remove first", () => {
+    el.querySelectorAll("p")[0].innerHTML = "1";
+    el.querySelectorAll("p")[1].innerHTML = "2";
     const value1 = "456";
     const value2 = "789";
     const value3 = "0";
@@ -47,5 +49,6 @@ describe("smart form", () => {
     submitValue(value2);
     submitValue(value3);
     expect(el.querySelectorAll("p").length).toBe(5);
+    expect(el.querySelectorAll("p")[0].innerHTML).toBe("2");
   });
 });
