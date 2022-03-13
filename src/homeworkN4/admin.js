@@ -3,6 +3,6 @@ export function adminInfo() {
     name: "John",
     age: 23,
   };
-  const admin = { role: "admin", user };
+  const admin = { role: "admin", ...user };
   return admin;
 }
