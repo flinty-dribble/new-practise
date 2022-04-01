@@ -2,6 +2,11 @@ import { sumOfNums } from "./task3";
 
 describe("sum", () => {
   it("sum of nums", () => {
-    expect(sumOfNums(234)).toEqual(9);
+    jest.spyOn(console, "log");
+
+    sumOfNums(123);
+
+    expect(console.log).toHaveBeenCalledTimes(1);
+    expect(console.log).toHaveBeenCalledWith(6);
   });
 });
