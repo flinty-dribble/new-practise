@@ -19,5 +19,6 @@ module.exports = {
       },
     ],
     "no-console": "off",
+    "no-alert": "off",
   },
 };

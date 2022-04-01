@@ -1,35 +1,37 @@
-export function monthNums(x) {
-  if (x === 1) {
+export function monthNums() {
+  const input = +prompt("write a month");
+
+  if (input === 1) {
     return "January";
   }
-  if (x === 2) {
+  if (input === 2) {
     return "February";
   }
-  if (x === 3) {
+  if (input === 3) {
     return "March";
   }
-  if (x === 4) {
+  if (input === 4) {
     return "April";
   }
-  if (x === 5) {
+  if (input === 5) {
     return "May";
   }
-  if (x === 6) {
+  if (input === 6) {
     return "June";
   }
-  if (x === 7) {
+  if (input === 7) {
     return "July";
   }
-  if (x === 8) {
+  if (input === 8) {
     return "August";
   }
-  if (x === 9) {
+  if (input === 9) {
     return "September";
   }
-  if (x === 10) {
+  if (input === 10) {
     return "October";
   }
-  if (x === 11) {
+  if (input === 11) {
     return "November";
   }
   return "December";
