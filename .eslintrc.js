@@ -18,5 +18,6 @@ module.exports = {
         ignoreComments: true,
       },
     ],
+    "no-console": "off",
   },
 };
