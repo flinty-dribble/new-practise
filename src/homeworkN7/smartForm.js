@@ -1,20 +1,38 @@
-export function smartForm(el) {
+export function smartForm() {
+  const body = document.querySelector("body");
   const input = document.createElement("input");
-  el.appendChild(input);
-
   const button = document.createElement("button");
-  el.appendChild(button);
+
+  body.append(input);
+  body.append(button);
+
+  button.innerHTML = "click";
 
   const num = 3;
   const par = [];
   for (let i = 0; i < num; i += 1) {
     par[i] = document.createElement("p");
-    el.appendChild(par[i]);
+    body.append(par[i]);
+    par[i].innerHTML = i + 1;
   }
 
   button.addEventListener("click", () => {
+    const p = document.querySelectorAll("p");
     par.push(document.createElement("p"));
     par[par.length - 1].innerHTML = input.value;
-    el.appendChild(par[par.length - 1]);
+    body.append(par[par.length - 1]);
+    if (p.length > 4) {
+      p[0].remove();
+    }
+  });
+
+  input.addEventListener("input", () => {
+    if (input.value === "") {
+      button.hidden = true;
+    } else {
+      button.hidden = false;
+    }
   });
 }
+
+smartForm();
